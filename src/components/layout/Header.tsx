@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
@@ -38,8 +39,18 @@ const Header = () => {
 
   return (
     <div className="fixed top-[20px] left-1/2 w-[95%] md:w-[64rem] p-3 bg-primary rounded-lg -translate-x-1/2 border border-dark-primary">
-      <div className="flex justify-between items-center">
-        <p>Engids</p>
+      <div className="grid grid-cols-2 md:grid-cols-3">
+        <div className="relative">
+          <Image
+          src="/images/logo.png"
+          alt="logo"
+          width={0}
+          height={0}
+          priority
+          sizes="100vw"
+          className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] bg-white rounded-full object-cover absolute top-[-25px] lef-[40px]"
+        />
+        </div>
         <div className="hidden md:flex justify-center items-center gap-8 text-sm">
           {navData?.map((item: NavData, i: number) => (
             <Link key={i} href={item.url}>
@@ -53,8 +64,10 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <div>
-          <button className="border border-dark-primary p-2 rounded-full cursor-pointer"><Menu size={16}/></button>
+        <div className="flex justify-end">
+          <button className="border border-dark-primary p-2 rounded-full cursor-pointer">
+            <Menu size={16} />
+          </button>
         </div>
       </div>
     </div>
