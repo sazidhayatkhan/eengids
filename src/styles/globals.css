@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdf0eb;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-primary: #feded4;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding-inline: 0%;
+  }
+}
