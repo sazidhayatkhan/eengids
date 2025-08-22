@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import { nunito } from "@/fonts/font";
+import { raleway } from "../fonts/font";
 import Header from "@/components/layout/Header";
 
 
@@ -15,12 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={nunito.className}>
+    <html lang="en">
       <body
         className={`antialiased`}
       >
         <Header/>
-        {children}
+        <div className={`mt-[90px] ${raleway.className}`}>
+          {children}
+        </div>
       </body>
     </html>
   );
