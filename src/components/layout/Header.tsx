@@ -48,7 +48,7 @@ const Header = () => {
           height={0}
           priority
           sizes="100vw"
-          className="w-[50px] md:w-[80px] h-[50px] md:h-[80px] bg-white rounded-full object-cover absolute top-[-25px] lef-[40px]"
+          className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] bg-white rounded-full object-cover absolute top-[-13px] md:top-[-25px] lef-[40px]"
         />
         </div>
         <div className="hidden md:flex justify-center items-center gap-8 text-sm">
