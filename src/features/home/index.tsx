@@ -1,12 +1,13 @@
 import React from 'react'
 import Categories from './components/Categories'
+import Hero from './components/Hero'
 
 type Props = {}
 
 const HomePage = (props: Props) => {
   return (
     <div className='container space-y-5'>
-      <div className='w-full h-[300px] bg-amber-100'></div>
+      <Hero/>
       <Categories/>
     </div>
   )

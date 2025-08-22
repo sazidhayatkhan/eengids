@@ -39,7 +39,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed top-[20px] left-1/2 w-[95%] md:w-[64rem] p-3 bg-primary rounded-lg -translate-x-1/2 border border-dark-primary">
+    <div className="z-20 fixed top-[20px] left-1/2 w-[95%] md:w-[64rem] p-3 bg-primary rounded-lg -translate-x-1/2 border border-dark-primary">
       <div className="grid grid-cols-2 md:grid-cols-3">
         <div className="relative">
           <Image
